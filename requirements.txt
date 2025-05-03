@@ -1,0 +1,9 @@
+numpy
+pandas
+streamlit
+pygwalker
+os
+missingno
+seaborn
+matplotlib
+sckit-learn
