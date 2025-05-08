@@ -1,0 +1,10 @@
+numpy
+pandas
+streamlit
+pygwalker
+missingno
+seaborn
+matplotlib
+scikit-learn
+ipykernel
+xgboost
