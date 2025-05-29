@@ -42,7 +42,7 @@ def run():
     income_avg = filtered_df.income_annum.mean()/1e6
     loan_avg = filtered_df.loan_amount.mean()/1e6
     income_sum = filtered_df.income_annum.sum()
-    ratio = (filtered_df.loan_amount.sum() / income_sum * 100) if income_sum > 0 else 0
+    ratio = (filtered_df.loan_amount.sum() / income_sum * 100) if income_sum > 0 else 0 # Bang (total loan_amount / income_sum *100) 
 
     col1.metric('Tổng số hồ sơ', filtered_df.shape[0])
     col2.metric("Được duyệt", approved)
@@ -58,7 +58,7 @@ def run():
         fig1, ax1 = plt.subplots()
         status_counts.plot.pie(
             autopct='%1.1f%%',
-            startangle=90,
+            # startangle=90,
             ax=ax1,
             shadow=True,
             explode=[0.1 if i == status_counts.idxmax() else 0 for i in status_counts.index]

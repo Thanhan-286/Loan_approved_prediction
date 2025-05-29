@@ -8,3 +8,4 @@ matplotlib
 scikit-learn
 ipykernel
 xgboost
+fastapi
