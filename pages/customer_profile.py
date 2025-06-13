@@ -8,11 +8,13 @@ import os
 # Cấu hình thư mục và import hàm tiền xử lý
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.processing_data import preprocess_data
+# ====== Load dữ liệu ======
+CURRENT_DIR = os.path.dirname(__file__)
+DATA_PATH = os.path.join(CURRENT_DIR, '..', 'data', 'loan_approval_dataset.csv')
+df = preprocess_data(DATA_PATH)
 def run():
     # ====== Load dữ liệu ======
-    CURRENT_DIR = os.path.dirname(__file__)
-    DATA_PATH = os.path.join(CURRENT_DIR, '..', 'data', 'loan_approval_dataset.csv')
-    df = preprocess_data(DATA_PATH)
+    
 
     # ====== Bộ lọc ở sidebar ======
     st.sidebar.header("🎛️ Bộ lọc khách hàng")
